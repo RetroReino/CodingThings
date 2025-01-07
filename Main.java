@@ -7,5 +7,6 @@ public class Main{
         year.getYearString();
         year.printYear();
         System.out.println( "This is the end of the program." );
+        System.out.println( Go.triple(40) );
     }
 }
