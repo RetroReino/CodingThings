@@ -1,12 +1,39 @@
 public class Main{
-
-    static Year year = new Year(2025);
-
+    
+    public static Year year = new Year(2025);
+    public static ages age = new ages();
     public static void main(String[] args){
+        
+        System.out.println( "would you like to use born Y/N?" );
+        String answer = System.console().readLine();
+        if( answer.equals("Y") || answer.equals("y") ){
+            born();
+        }
+        else{
         System.out.println( year.getYear() );
         year.getYearString();
         year.printYear();
         System.out.println( "This is the end of the program." );
         System.out.println( Go.triple(40) );
     }
+}
+private static void born(){
+    int life = 0;
+    System.out.println( "What year were you born?" );
+    try {   // try and catch is used to catch errors in the program
+        // parseint is used to convert a string to an integer
+        year.setYear( Integer.parseInt( System.console().readLine() ) ); // parseint is used to convert a string to an integer
+    } catch (NumberFormatException e) { // if there is an error then the program will print this message
+        System.out.println( "Please enter a valid integer." );
+    }
+    System.out.println( "How old are you?" );
+    try {
+        life = Integer.parseInt( System.console().readLine() );
+    } catch (NumberFormatException e) {
+        System.out.println( "Please enter a valid integer." );
+    }
+    age.calcAge( year, life );
+    year.printYear();
+    
+}
 }
