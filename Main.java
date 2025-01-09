@@ -8,14 +8,27 @@ public class Main{
         String answer = System.console().readLine();
         if( answer.equals("Y") || answer.equals("y") ){
             born();
+            return;
         }
         else{
+            System.out.println( "you have chosen not to be born." + "\n" + "...goodbye." + "\n" +
+             "This is the end of the program." + "\n" + "Just kidding, :)" + "\n" +
+             "Would you like to use the stretch class Y/N?" );
+            answer = System.console().readLine().indexOf("Y") > -1 ? "Y" : "N";
+            if( answer.equals("Y") || answer.equals("y") ){
+                Stretch stretch = new Stretch();
+                stretch.calcStretch();
+                return;
+            }
+       
+        }
+
         System.out.println( year.getYear() );
         year.getYearString();
         year.printYear();
         System.out.println( "This is the end of the program." );
-        System.out.println( Go.triple(40) );
-    }
+        System.out.println( trice.triple(40) );
+    
 }
 private static void born(){
     int life = 0;
@@ -35,5 +48,9 @@ private static void born(){
     age.calcAge( year, life );
     year.printYear();
     
+}
+
+public void calcStretch(){
+    System.out.println( "This is testing superclasses, overrides and extend and is useless." );
 }
 }
