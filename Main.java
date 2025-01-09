@@ -2,8 +2,8 @@ public class Main{
     
     public static Year year = new Year(2025);
     public static ages age = new ages();
+    public static int num = ( 100 + 1000000 + (Integer.parseInt(" 20 + 20 ") + 20 + 30 / 10 ) );
     public static void main(String[] args){
-        
         System.out.println( "would you like to use born Y/N?" );
         String answer = System.console().readLine();
         if( answer.equals("Y") || answer.equals("y") ){
@@ -38,6 +38,10 @@ private static void born(){
         year.setYear( Integer.parseInt( System.console().readLine() ) ); // parseint is used to convert a string to an integer
     } catch (NumberFormatException e) { // if there is an error then the program will print this message
         System.out.println( "Please enter a valid integer." );
+        year.setYear( Integer.parseInt( System.console().readLine() ) );
+    }
+    finally{ // finally is used to execute code after the try and catch block
+        System.out.println( "You were born in " + year.getYear() );
     }
     System.out.println( "How old are you?" );
     try {
@@ -52,5 +56,6 @@ private static void born(){
 
 public void calcStretch(){
     System.out.println( "This is testing superclasses, overrides and extend and is useless." );
+    System.out.println( "100" + 100 );
 }
 }
