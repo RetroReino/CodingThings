@@ -1,4 +1,4 @@
-public class ages {
+public class Ages{
     int age = 0;
     Year year = new Year(2025);
     public void calcAge( Year year, int age)

@@ -1,7 +1,7 @@
 public class Main{
     
     public static Year year = new Year(2025);
-    public static ages age = new ages();
+    public static Ages age = new Ages();
     public static int num = ( 100 + 1000000 + (Integer.parseInt(" 20 + 20 ") + 20 + 30 / 10 ) );
     public static void main(String[] args){
         System.out.println( "would you like to use born Y/N?" );
