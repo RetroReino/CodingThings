@@ -12,7 +12,7 @@ public class Launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JFrameOne frame1 = new JFrameOne();   
+                MainFrame frame1 = new MainFrame();   
             }
         });
    }
