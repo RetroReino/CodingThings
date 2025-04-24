@@ -12,7 +12,8 @@ public class Launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                MainFrame frame1 = new MainFrame();   
+                JFrameButton JFrame = new JFrameButton();   
+                JFrame.show();
             }
         });
    }

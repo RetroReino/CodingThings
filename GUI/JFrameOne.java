@@ -10,9 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-/**
- *
- */
 public class JFrameOne {
 	//* You can also extend JFrameOne with JFrame to get the same results*/
 	private JFrame frame;
@@ -23,11 +20,12 @@ public class JFrameOne {
 
 	public void initialize(){
 		frame =  new JFrame();
-		this.frame.setTitle("JFrameOne");
-		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		this.frame.setSize( 500, 400); //specified by pixels
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setResizable(false);//cannot change the size of the panel
+		frame.setTitle("JFrameOne");
+
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setSize( 800, 500); //specified by pixels
+		frame.setLocationRelativeTo(null);
+		frame.setVisible( true );
 
 		JPanel panel = new JPanel();
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 5)); //in pixels

@@ -1,3 +1,8 @@
+/**
+ * This package contains classes and components related to the graphical user interface (GUI)
+ * of the application. It is responsible for managing and displaying the main window and
+ * other visual elements.
+ */
 package GUI;
 
 import javax.swing.JFrame;
