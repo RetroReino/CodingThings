@@ -16,6 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 
 public class JFrameButton {
@@ -69,9 +70,15 @@ public class JFrameButton {
 
 		//button.setEnabled(false);	////* unable to interact with the button
 
-		button.doClick(); //autoclick the button 
+		button.doClick(); //autoclick the button when it is created
 
-		//continue here 10:34 through video
+		//button.setVerticalTextPosition(SwingConstants.BOTTOM); //changes where the text is compared to the image.
+		//button.setHorizontalTextPosition(SwingConstants.CENTER); // text under image
+
+		button.setVerticalTextPosition(SwingConstants.CENTER); 
+		button.setHorizontalTextPosition(SwingConstants.LEFT);
+
+		button.setPreferredSize( new Dimension(200, 75) );
 
 		button.setMnemonic(KeyEvent.VK_P);//press ALT + P and the button is clicked.
 		
