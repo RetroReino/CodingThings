@@ -12,7 +12,7 @@ public class Launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JFrameJLabel JFrame = new JFrameJLabel();   
+                JFrameJTextField JFrame = new JFrameJTextField();   
                 JFrame.show();
             }
         });
